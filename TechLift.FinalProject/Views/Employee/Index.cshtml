@@ -55,15 +55,15 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="Age">ContactNo</label>
+                        <label for="ContactNo">ContactNo</label>
                         <input type="text" class="form-control" id="ContactNo" placeholder="ContactNo" />
                     </div>
                     <div class="form-group">
-                        <label for="State">Email</label>
+                        <label for="Email">Email</label>
                         <input type="email" class="form-control" id="Email" placeholder="Email" />
                     </div>
                     <div class="form-group">
-                        <label for="Age">Designation</label>
+                        <label for="Designation">Designation</label>
                         <input type="text" class="form-control" id="Designation" placeholder="Designation" />
                     </div>
                     <div class="form-group">
@@ -212,72 +212,20 @@
         });
     }
 
-    //function Update() {
-
-    //    var empObj = {
-    //        Id: $('#EmployeeID').val(),
-    //        Name: $('#Name').val(),
-    //        ContactNo: $('#ContactNo').val(),
-    //        Email: $('#Email').val(),
-    //        Designation: $('#Designation').val(),
-    //        DepartmentId: $('#DepartmentId').val(),
-    //        DepartmentName: ''
-    //    };
-    //    $.ajax({
-    //        url: "https://localhost:7033/api/Employee/UpdateEmployee",
-    //        data: JSON.stringify(empObj),
-    //        type: "POST",
-    //        contentType: "application/json;charset=utf-8",
-    //        dataType: "json",
-    //        success: function (result) {
-    //            loadData();
-
-    //            $('#myModal').modal('hide');
-    //            $('#EmployeeID').val(""),
-    //                $('#Name').val("")),
-    //        $('#ContactNo').val("")),
-    //    $('#Email').val("")),
-    //    $('#Designation').val("")),
-    //    $('#DepartmentId').val("")),
-    //},
-    //error: function (errormessage) {
-    //    alert(errormessage.responseText);
-    //}
-    //        });
-    //    }
-
-
-
-    ////Function for clearing the textboxes
-    //function clearTextBox() {
-    //    $('#EmployeeID').val(""),
-    //        $('#Name').val("")),
-    //    $('#ContactNo').val("")),
-    //    $('#Email').val("")),
-    //    $('#Designation').val("")),
-    //    $('#DepartmentId').val("")),
-    //    $('#btnUpdate').hide();
-    //    $('#btnAdd').show();
-    //    $('#Name').css('border-color', 'lightgrey');
-    //    $('#ContactNo').css('border-color', 'lightgrey');
-    //    $('#Email').css('border-color', 'lightgrey');
-    //    $('#Designation').css('border-color', 'lightgrey');
-    //    $('#DepartmentId').css('border-color', 'lightgrey');
-    //}
 
     //Function for clearing the textboxes
     function clearTextBox() {
         $('#EmployeeID').val("");
         $('#Name').val("");
-        $('#Age').val("");
-        $('#State').val("");
-        $('#Country').val("");
+        $('#ContactNo').val("");
+        $('#Email').val("");
+        $('#Designation').val("");
         $('#btnUpdate').hide();
         $('#btnAdd').show();
         $('#Name').css('border-color', 'lightgrey');
-        $('#Age').css('border-color', 'lightgrey');
-        $('#State').css('border-color', 'lightgrey');
-        $('#Country').css('border-color', 'lightgrey');
+        $('#ContactNo').css('border-color', 'lightgrey');
+        $('#Email').css('border-color', 'lightgrey');
+        $('#Designation').css('border-color', 'lightgrey');
     }
     //Valdidation using jquery
     function validate() {
@@ -289,26 +237,26 @@
         else {
             $('#Name').css('border-color', 'lightgrey');
         }
-        if ($('#Age').val().trim() == "") {
-            $('#Age').css('border-color', 'Red');
+        if ($('#ContactNo').val().trim() == "") {
+            $('#ContactNo').css('border-color', 'Red');
             isValid = false;
         }
         else {
-            $('#Age').css('border-color', 'lightgrey');
+            $('#ContactNo').css('border-color', 'lightgrey');
         }
-        if ($('#State').val().trim() == "") {
-            $('#State').css('border-color', 'Red');
+        if ($('#Email').val().trim() == "") {
+            $('#Email').css('border-color', 'Red');
             isValid = false;
         }
         else {
-            $('#State').css('border-color', 'lightgrey');
+            $('#Email').css('border-color', 'lightgrey');
         }
-        if ($('#Country').val().trim() == "") {
-            $('#Country').css('border-color', 'Red');
+        if ($('#Designation').val().trim() == "") {
+            $('#Designation').css('border-color', 'Red');
             isValid = false;
         }
         else {
-            $('#Country').css('border-color', 'lightgrey');
+            $('#Designation').css('border-color', 'lightgrey');
         }
         return isValid;
     }
